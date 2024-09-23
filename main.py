@@ -57,7 +57,7 @@ def selectTaxlotData():
             print("File dialog got canceled.")
 
     except Exception as e:
-        QMessageBox.information(window, 'operation failed', 'function failed with ' + str(e.__str__()) + ': ' + str(e),
+        QMessageBox.information(window, 'operation failed', 'function failed with ' + str(e),
                                 QMessageBox.Ok)
         ui.statusbar.clearMessage()
 
@@ -78,7 +78,7 @@ def populateLotValues():
         ui.taxlotSearchLE.setCompleter(completer)
 
     except Exception as e:
-        QMessageBox.information(window, 'operation failed', 'function failed with ' + str(e.__str__()) + ': ' + str(e),
+        QMessageBox.information(window, 'operation failed', 'function failed with ' + str(e),
                                 QMessageBox.Ok)
         ui.statusbar.clearMessage()
 
@@ -97,7 +97,7 @@ def projDir(): # choose a folder to store all the created outputs from the tool,
         else:
             print("File dialog got canceled.")
     except Exception as e:
-        QMessageBox.information(window, 'operation failed', 'function failed with ' + str(e.__str__()) + ': ' + str(e),
+        QMessageBox.information(window, 'operation failed', 'function failed with ' + str(e),
                                 QMessageBox.Ok)
         ui.statusbar.clearMessage()
 
@@ -121,7 +121,7 @@ def createFolder(): # create a folder to store two new shapefiles and arcpro pro
             QMessageBox.information(window, "Information", f"New folder --> {os.path.basename(folderPath)} created.")  # print info to message box
 
     except Exception as e:
-        QMessageBox.information(window, 'operation failed', 'function failed with ' + str(e.__str__()) + ': ' + str(e),
+        QMessageBox.information(window, 'operation failed', 'function failed with ' + str(e),
                                 QMessageBox.Ok)
         ui.statusbar.clearMessage()
 
@@ -142,7 +142,7 @@ def createTarget(): # create the target shapefile, this will is the taxlot with 
         print(f"{os.path.basename(output_file)} is stored in {os.path.normpath(os.path.dirname(output_file))}")
 
     except Exception as e:
-        QMessageBox.information(window, 'operation failed', 'function failed with ' + str(e.__str__()) + ': ' + str(e),
+        QMessageBox.information(window, 'operation failed', 'function failed with ' + str(e),
                                 QMessageBox.Ok)
         ui.statusbar.clearMessage()
 
